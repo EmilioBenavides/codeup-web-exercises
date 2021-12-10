@@ -61,6 +61,8 @@ console.log(sample);
 console.log(sample = sample.replace("Students", "Class"));
 console.log(sample.indexOf('c'));
 console.log(sample.indexOf('C'));
+console.log(sample.indexOf("Codeup"));
+console.log(sample.substring('C'), sample.indexOf('s')));
 
 
 
