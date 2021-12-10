@@ -53,6 +53,17 @@ console.log(!!"false");
 console.log(!!"0");
 
 
+var sample = "Hello Codeup";
+console.log(sample.length);
+console.log(sample.toUpperCase());
+console.log(sample = sample + " Students");
+console.log(sample);
+console.log(sample = sample.replace("Students", "Class"));
+console.log(sample.indexOf('c'));
+console.log(sample.indexOf('C'));
+
+
+
 
 
 
