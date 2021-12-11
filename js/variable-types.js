@@ -62,7 +62,39 @@ console.log(sample = sample.replace("Students", "Class"));
 console.log(sample.indexOf('c'));
 console.log(sample.indexOf('C'));
 console.log(sample.indexOf("Codeup"));
-console.log(sample.substring('C'), sample.indexOf('s')));
+console.log(sample.substring(sample.indexOf('C'),sample.indexOf("p")+1));
+
+
+var littleMermaid = 3;
+var brotherBear = 5;
+var hercules = 1;
+var pricePerday = 3;
+
+console.log("$" + (pricePerday * (littleMermaid + brotherBear + hercules)));
+
+var google = 400;
+var amazon = 380;
+var facebook = 350;
+console.log("$" + ((google * 6) + (amazon * 4) + (facebook * 10)));
+
+var classIsAvailable = true
+var noScheduleConflict = true
+var classResponse = (classIsAvailable && noScheduleConflict) ? "Great sign me up!" : "Can't join this class.";
+console.log(classResponse);
+
+
+var numberOfItems = 3
+var offerIsValid = true
+var premiumMembers = false
+var offerResponse = ((numberOfItems > 2 || premiumMembers) && offerIsValid) ? "Offer is valid!" : "Offer is not valid!";
+console.log(offerResponse);
+
+
+
+
+
+
+
 
 
 
