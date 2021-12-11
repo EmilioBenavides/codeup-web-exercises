@@ -89,6 +89,15 @@ var premiumMembers = false
 var offerResponse = ((numberOfItems > 2 || premiumMembers) && offerIsValid) ? "Offer is valid!" : "Offer is not valid!";
 console.log(offerResponse);
 
+var username = 'codeup';
+var password = 'notastrongpassword';
+
+var characterAmountCondition = password.length > 5;
+var doesntIncludeUserName = !password.includes(username);
+var characterLimit = password.length <= 20;
+var noWhiteSpace = password.charAt(0) !== " " && password.charAt(password.length - 1) !== " ";
+var passedPassword = (characterAmountCondition && doesntIncludeUserName && characterLimit && noWhiteSpace) ? "Password accepted." : "Password invalid";
+console.log(passedPassword);
 
 
 
