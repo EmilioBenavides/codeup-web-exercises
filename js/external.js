@@ -17,9 +17,20 @@
 //alert("Your total is $" + (totalAmount * 3));
 
 
-var google = prompt("How many hours did you work at Google?");
-var amazon =  prompt("How many hours did you work at Amazon?");
-var facebook = prompt("How many hours did you work at Facebook?");
-var totalPayout = parseInt(google * 400) + parseInt(amazon * 380) + parseInt(facebook * 350);
-alert("Your total pay for the week is $" + (totalPayout));
+//var google = prompt("How many hours did you work at Google?");
+//var amazon =  prompt("How many hours did you work at Amazon?");
+//var facebook = prompt("How many hours did you work at Facebook?");
+//var totalPayout = parseInt(google * 400) + parseInt(amazon * 380) + parseInt(facebook * 350);
+//alert("Your total pay for the week is $" + (totalPayout));
 
+
+var classIsNotFull = prompt('This class in not full. Would you like to join?');
+
+let noScheduleConflicts = null;
+if (classIsNotFull === 'yes') {
+    noScheduleConflicts = prompt('This class is available these days, does that work for you?');
+}
+
+if (classIsNotFull === 'no') alert('Thank you! Have a good day!');
+if (classIsNotFull === 'yes' && noScheduleConflicts === 'no') alert('Thank you! Have a good day!');
+if (classIsNotFull === 'yes' && noScheduleConflicts === 'yes') alert('Congratulations you are now enrolled');
