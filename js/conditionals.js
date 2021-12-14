@@ -22,10 +22,10 @@
  * console.logging the function's return value
  */
 
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
+Don't change the next two lines!
+These lines create two variables for you:
+- `colors`: a list of the colors of the rainbow
+- `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -77,8 +77,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ Generate a random number between 0 and 6
+ var luckyNumber = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
@@ -98,3 +98,30 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+//
+// Create a function called analyzeColor1 that takes a parameter called color
+// In your function, use ONLY if statements to print the following:
+//     “blue is the color of the sky” if the value of color is “blue”
+// “red is the color of love” if the value of color is “red”
+// “green is the color of envy” if the value of color is “green”
+// “I don’t know that color” if the value of color is anything else
+// HINT: use return in the conditional code blocks to prevent from printing multiple times for the same argument
+// Add, commit, and push to GitHub.
+
+function analyzeColor1(color) {
+    if (color === "blue") {
+        return "blue is the color of the sky";
+    }
+    if (color === "red") {
+        return "red is the color of love";
+    }
+    if (color === "green") {
+        return "green is the color of envy";
+    }
+}
+
+console.log(analyzeColor1("blue"));
+console.log(analyzeColor1("green"));
+console.log(analyzeColor1("red"));
+
