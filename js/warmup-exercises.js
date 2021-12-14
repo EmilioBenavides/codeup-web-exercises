@@ -9,15 +9,22 @@
 //     console.log("you are not approved")
 // }
 
-function isFive(x) {
-    if (x === 3) {
-        return true;
-    } else {
-        return false;
+// function isFive(x) {
+//     if (x === 3) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log (isFive(3));
+
+// Make a function named isMultipleOfThree that takes in an input and returns a boolean indicating whether or not the input is a multiple of three.
+
+function isMultipleOfThree(x) {
+    return x % 3 === 0;
     }
-}
-console.log (isFive(3));
 
 
+console.log(isMultipleOfThree(12))
 
 
