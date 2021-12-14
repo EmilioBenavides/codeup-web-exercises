@@ -22,13 +22,31 @@
  * console.logging the function's return value
  */
 
-Don't change the next two lines!
-These lines create two variables for you:
-- `colors`: a list of the colors of the rainbow
-- `randomColor`: contains a single random color value from the list (this
+// Don't change the next two lines!
+// These lines create two variables for you:
+// - `colors`: a list of the colors of the rainbow
+// - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+// function analyzeColor1(color) {
+//     if (color === "blue") {
+//         return "blue is the color of the sky";
+//     }
+//     if (color === "red") {
+//         return "red is the color of love";
+//     }
+//     if (color === "green") {
+//         return "green is the color of envy";
+//     }
+// }
+// console.log(analyzeColor1("blue"));
+// console.log(analyzeColor1("green"));
+// console.log(analyzeColor1("red"));
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
@@ -39,6 +57,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+// function analyzeColor(color) {
+//     switch(color) {
+//         case "blue":
+//             alert("blue is the color of the sky");
+//             break;
+//         case "red":
+//             alert("red is the color of love");
+//             break;
+//         default:
+//             alert("I don't know that color");
+//
+//     }
+// }
+// var analyzeColor1 = prompt("what is the color of the sky");
+// analyzeColor(analyzeColor1);
+//
 
 /**
  * TODO:
@@ -46,6 +80,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+//
+// var color = prompt("Please enter a color")
+//     analyzeColor(color);
+
+
 
 /* ########################################################################## */
 
@@ -69,6 +108,27 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal (luckyNumber, totalAmount) {
+    if (luckyNumber === 0) {
+        return "No discount. total amount is $" + totalAmount;
+    } else if (luckyNumber === 1) {
+        return "Your total after discount is $" + (totalAmount - (totalAmount * .10));
+    } else if (luckyNumber === 2) {
+        return "Your total after discount is $" + (totalAmount - (totalAmount * .25));
+    } else if (luckyNumber === 3) {
+        return "Your total after discount is $" + (totalAmount - (totalAmount * .35));
+    } else if (luckyNumber === 4) {
+        return "Your total after discount is $" + (totalAmount - (totalAmount * .50));
+    } else if (luckyNumber === 5) {
+        return "Your items are free";
+    }
+
+}
+// console.log(calculateTotal(2, 100)); // returns 100
+// console.log(calculateTotal(4, 100)); // returns 50
+// console.log(calculateTotal(5, 100)); // returns 0
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -77,8 +137,12 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
- Generate a random number between 0 and 6
+ // Generate a random number between 0 and 6
  var luckyNumber = Math.floor(Math.random() * 6);
+ console.log(luckyNumber);
+var userInput = prompt("what is your bill?");
+alert(calculateTotal(luckyNumber, userInput));
+
 
 /**
  * TODO:
@@ -109,19 +173,5 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // HINT: use return in the conditional code blocks to prevent from printing multiple times for the same argument
 // Add, commit, and push to GitHub.
 
-function analyzeColor1(color) {
-    if (color === "blue") {
-        return "blue is the color of the sky";
-    }
-    if (color === "red") {
-        return "red is the color of love";
-    }
-    if (color === "green") {
-        return "green is the color of envy";
-    }
-}
 
-console.log(analyzeColor1("blue"));
-console.log(analyzeColor1("green"));
-console.log(analyzeColor1("red"));
 
