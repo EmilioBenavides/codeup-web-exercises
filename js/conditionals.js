@@ -138,10 +138,10 @@ function calculateTotal (luckyNumber, totalAmount) {
  * price before the discount was, and what their price after the discount is.
  */
  // Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
- console.log(luckyNumber);
-var userInput = prompt("what is your bill?");
-alert(calculateTotal(luckyNumber, userInput));
+//  var luckyNumber = Math.floor(Math.random() * 6);
+//  console.log(luckyNumber);
+// var userInput = prompt("what is your bill?");
+// alert(calculateTotal(luckyNumber, userInput));
 
 
 /**
@@ -162,7 +162,44 @@ alert(calculateTotal(luckyNumber, userInput));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let userChoice = confirm("Would you like to enter a number?");
 
+    function userPick(userInput){
+        if (userInput === true) {
+            userOutput(prompt("Please input a number."));
+        } else {
+            return alert("You should have picked a number. You now have 7 days bad luck.");
+        }
+    }
+console.log(userChoice);
+    function userOutput (userInput) {
+        if (isNaN(userInput)) {
+            alert("You have entered an invalid data type.")
+        } else if(!isNaN(userInput)) {
+            evenOrOddInput(userInput);
+            userNumberPlus100(userInput);
+            posOrNeg(userInput);
+        }
+    }
+    function evenOrOddInput(userInput) {
+        if (parseFloat(userInput) % 2 === 0) {
+            return alert("You have entered an even number");
+        } else {
+            return alert("You have entered an odd number");
+        }
+    }
+    function userNumberPlus100(userInput) {
+        let addNumber = parseInt(userInput);
+        return alert (addNumber + 100);
+    }
+    function posOrNeg (userInput) {
+        if (userInput < 0) {
+            alert("You have entered a negative number.");
+        } else {
+            alert("You have entered a  positive number.");
+        }
+    }
+    userPick(userChoice);
 //
 // Create a function called analyzeColor1 that takes a parameter called color
 // In your function, use ONLY if statements to print the following:
