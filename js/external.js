@@ -1,11 +1,11 @@
-//console.log("Hello from external JavaScript!");
+console.log("Hello from external JavaScript!");
 
-//alert("Welcome to my Website!");
+alert("Welcome to my Website!");
 
 
-//var favoriteColor = prompt("What is your favorite color?");
+var favoriteColor = prompt("What is your favorite color?");
 
-//alert("Great, " + favoriteColor + " is my favorite color too!");
+alert("Great, " + favoriteColor + " is my favorite color too!");
 
 
 
@@ -34,10 +34,10 @@
 // if (classIsNotFull === 'no') alert('Thank you! Have a good day!');
 // if (classIsNotFull === 'yes' && noScheduleConflicts === 'no') alert('Thank you! Have a good day!');
 // if (classIsNotFull === 'yes' && noScheduleConflicts === 'yes') alert('Congratulations you are now enrolled');
-
-var premiumMember = prompt("Are you a premium member?");
-var productAmount = prompt("How many items do you have?");
-var offerValid = prompt("Is your offer valid?");
-if (offerValid === 'no' || (productAmount < 2 && offerValid === 'yes') || (premiumMember === 'no' && offerValid === 'yes')) alert("Discount cannot be applied");
-if (offerValid === 'yes' && (productAmount > 2 || premiumMember === 'yes')) alert("Discount has been applied");
+//
+// var premiumMember = prompt("Are you a premium member?");
+// var productAmount = prompt("How many items do you have?");
+// var offerValid = prompt("Is your offer valid?");
+// if (offerValid === 'no' || (productAmount < 2 && offerValid === 'yes') || (premiumMember === 'no' && offerValid === 'yes')) alert("Discount cannot be applied");
+// if (offerValid === 'yes' && (productAmount > 2 || premiumMember === 'yes')) alert("Discount has been applied");
 
