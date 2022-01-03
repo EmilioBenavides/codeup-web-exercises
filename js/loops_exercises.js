@@ -14,21 +14,61 @@
 
 // Meaning of life exercises //
 
-function getMeaningOfLife(meaningFulNum) {
-    let counter = 0
-    if (!isNaN(meaningFulNum)) {
+// function getMeaningOfLife(meaningFulNum) {
+//     let counter = 0
+//     if (!isNaN(meaningFulNum)) {
+//
+//         while (counter != meaningFulNum) {
+//             counter++
+//         }
+//         console.log("The meaning of life, the universe, and everything is " + meaningFulNum)
+//     }
+//     if (meaningFulNum == 42) {
+//         console.log("Did you bring your towel?")
+//     }
+// }
+//     getMeaningOfLife(8);
+//
+//     getMeaningOfLife("s");
+//     getMeaningOfLife(42);
+//     getMeaningOfLife("42");
+                        //*** Do While Loop exercises ***//
+// let someCondition = 10;
+//
+// do {
+//     console.log("the loop ran!");
+//     someCondition++;
+// } while (someCondition < 20)
 
-        while (counter != meaningFulNum) {
-            counter++
-        }
-        console.log("The meaning of life, the universe, and everything is " + meaningFulNum)
-    }
-    if (meaningFulNum == 42) {
-        console.log("Did you bring your towel?")
-    }
+
+function getToWork() {
+    let gasInTank = .1;
+
+    do {
+        //drive to work
+        console.log("Let's go to work!");
+        gasInTank -= .25;
+        console.log("You have " + gasInTank + " remaining!");
+    }while (gasInTank > .25)
+    console.log("Time to fill up the tank!")
 }
-    getMeaningOfLife(8);
+getToWork()
 
-    getMeaningOfLife("s");
-    getMeaningOfLife(42);
-    getMeaningOfLife("42");
+function freeToGo() {
+    var allCones = Math.floor(Math.random() * 50) + 50;
+
+    do {
+        console.log("Miller Time");
+        conesSold -= Math.floor(Math.random() * 5) + 1;
+        console.log("You have "
+
+    }
+
+
+}
+
+
+
+
+
+
