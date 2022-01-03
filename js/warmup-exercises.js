@@ -66,7 +66,11 @@ function getFizzBuzz(startingNum) {
         console.log("buzz");
     } else if (startingNum % 3 === 0) {
         console.log("fizz");
+    } else {
+        return "That ain't fizz"
     }
 }
-console.log(getFizzBuzz(15));
+
+
+console.log(getFizzBuzz(20));
 
