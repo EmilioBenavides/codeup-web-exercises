@@ -41,33 +41,30 @@
 // } while (someCondition < 20)
 
 
-function getToWork() {
-    let gasInTank = .1;
-
-    do {
-        //drive to work
-        console.log("Let's go to work!");
-        gasInTank -= .25;
-        console.log("You have " + gasInTank + " remaining!");
-    }while (gasInTank > .25)
-    console.log("Time to fill up the tank!")
-}
-getToWork()
+// function getToWork() {
+//     let gasInTank = .1;
+//
+//     do {
+//         //drive to work
+//         console.log("Let's go to work!");
+//         gasInTank -= .25;
+//         console.log("You have " + gasInTank + " remaining!");
+//     }while (gasInTank > .25)
+//     console.log("Time to fill up the tank!")
+// }
+// getToWork()
 
 function freeToGo() {
     var allCones = Math.floor(Math.random() * 50) + 50;
-
+    var conesSold = Math.floor(Math.random() * 5) + 1;
     do {
         console.log("Miller Time");
-        conesSold -= Math.floor(Math.random() * 5) + 1;
-        console.log("You have "
-
-    }
-
-
+        console.log("You have sold " + conesSold);
+    }while (allCones < conesSold)
+    console.log("I don't have enough cones");
 }
 
-
+freeToGo()
 
 
 
