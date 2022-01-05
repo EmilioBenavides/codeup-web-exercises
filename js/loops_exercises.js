@@ -54,18 +54,107 @@
 // }
 // getToWork()
 
-function freeToGo() {
-    var allCones = Math.floor(Math.random() * 50) + 50;
-    var conesSold = Math.floor(Math.random() * 5) + 1;
-    do {
-        console.log("Miller Time");
-        console.log("You have sold " + conesSold);
-    }while (allCones < conesSold)
-    console.log("I don't have enough cones");
-}
 
-freeToGo()
+// function freeToGo() {
+//     let allCones = Math.floor(Math.random() * 50) + 50;
+//     let conesSold;
+//     do {
+//         conesSold = Math.floor(Math.random() * 5) + 1;
+//         console.log("You asked for " + conesSold + " ice cream cones");
+//         if (conesSold > allCones){
+//             console.log(`cannot sell you ${conesSold} - I only have ${allCones}` );
+//         }
+//         allCones -= conesSold;
+//         console.log("There are " + allCones + " remaining");
+//
+//     }while (allCones > 0)
+//     console.log(allCones);
+// }
+//
+// freeToGo()
+
+//
+// function getPassword() {
+//     var answer = "howdy";
+//     var guess = "howdy";
+//     while(guess !== answer) {
+//         guess = prompt("enter your password: ");
+//     };
+//     console.log("done");
+// }
+//
+// function getPassword2() {
+//     var answer = "howdy";
+//     var guess = "howdy";
+//     do {
+//         guess = prompt("enter your password");
+//     } while (guess !== answer);
+//     console.log("done");
+// }
+//
+// getPassword2()
+//
+
+//
+// function petThosDoggos(numberOfDoggos) {
+//
+//     for (let i = 0; i <= numberOfDoggos; i++){
+//         console.log(`${i}: ** Pats that a good boi!**`);
+//     }
+// }
+
+// petThosDoggos(42)
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> only logs *if the iteration number is odd*
+//
+// function inputNum(outputNum) {
+//     for (let a = 0; a < outputNum; a++){
+//         if (a % 2 === 1){
+//          console.log(a);
+//         }
+//     }
+// }
+// inputNum(5)
+//
+// // TODO: MINI EXERCISE
+// //      Write a function which uses a for-loop and
+// //      -> accepts the number of times to iterate as a parameter
+// //      -> logs "This is an even iteration" on the evens
+// //      -> logs "This is an odd iteration" on the odds
+//
+// function inputNum2(outputNum) {
+//     for (let a = 0;a < outputNum; a++){
+//         if(b % 2 === 1) {
+//             console.log(`${a} This is an odd number`);
+//         } else {
+//             console.log(`${a} this is an even number`)
+//         }
+//     }
+// }
+// miniExercise2(5)
+// TODO: MINI EXERCISE
+//      Make a new version of your getPassword function using a for-loop!
+//      -> The purpose of the for-loop is to only allow a maximum number of attempts
+//          -> If the max attempt used unsuccessfully, alert the user of such and RETURN or BREAK
+//      -> Once the user enters the correct password, use the 'break' keyword to end the loop
+//      -> After the loop concludes, alert the use they have entered the correct password
+
+var answer = "howdy";
 
 
+function getPassword() {
+    var guess = "";
+    for {let i + 0; i < 3; i++) {
+        guess = prompt("enter password");
+        if(guess === answer) {
+           break;
+    }
+    if(i === 2) {
+        alert("no way jose");
+    }
+    alert("logged in");
 
-
+getPassword();

@@ -34,43 +34,80 @@
 
         // --------        Ramp Up Exercises 01-02-2022-----
 
+//
+//
+// function add(num1, num2) {
+//     return num1 + num2;
+// }
+// console.log(add(2, 2));
+//
+//
+// function square(numToSqr) {
+//         return numToSqr * numToSqr;
+// }
+// console.log(square(5));
+//
+//
+//
+//
+// function sumOfSquares(a, b) {
+//     var aSquared = square(a);
+//     var bSquared = square(b);
+//     return add(aSquared, bSquared);
+// }
+//
+// console.log("3 squared + 2 squared = " + sumOfSquares(3,3));
+//
+//
+// function getFizzBuzz(startingNum) {
+//     if (startingNum % 3 === 0 && startingNum % 5 === 0) {
+//         return "FIZZ BUZZ"
+//     } else if (startingNum % 5 === 0) {
+//         console.log("buzz");
+//     } else if (startingNum % 3 === 0) {
+//         console.log("fizz");
+//     } else {
+//         return "That ain't fizz"
+//     }
+// }
+//
+//
+// console.log(getFizzBuzz(20));
+//
+
+// Array exercise
+
+var favoriteArtists = ['King George Strait', 'Cody Johnson', 'Tupac', 'Notorius BIG', 'Weird Al Yankovic'];
+// console.log(favoriteArtists[0]);
+// console.log(favoriteArtists[2]);
+// console.log(favoriteArtists[4]);
 
 
-function add(num1, num2) {
-    return num1 + num2;
+// Iterating Arrays//
+
+for (let i = 0; i < favoriteArtists.length; i++) {
+    // console.log(favoriteArtists[i])
 }
-console.log(add(2, 2));
-
-
-function square(numToSqr) {
-        return numToSqr * numToSqr;
-}
-console.log(square(5));
-
-
-
-
-function sumOfSquares(a, b) {
-    var aSquared = square(a);
-    var bSquared = square(b);
-    return add(aSquared, bSquared);
+// Refactored version of original// 
+for (let i = favoriteArtists.length - 1; i >= 0; i--) {
+    // console.log(favoriteArtists[i])
 }
 
-console.log("3 squared + 2 squared = " + sumOfSquares(3,3));
+favoriteArtists.forEach(function (favoriteArtist) {
+    console.log(favoriteArtist)
+})
 
 
-function getFizzBuzz(startingNum) {
-    if (startingNum % 3 === 0 && startingNum % 5 === 0) {
-        return "FIZZ BUZZ"
-    } else if (startingNum % 5 === 0) {
-        console.log("buzz");
-    } else if (startingNum % 3 === 0) {
-        console.log("fizz");
-    } else {
-        return "That ain't fizz"
-    }
-}
 
 
-console.log(getFizzBuzz(20));
+
+
+
+
+
+
+
+
+
+
 
