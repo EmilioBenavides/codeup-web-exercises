@@ -20,7 +20,7 @@
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
     planets.unshift("The Sun");
-    console.log(planets)
+    console.log(planets);
 
 
 
@@ -31,7 +31,7 @@
 
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
-    planets.shift()
+    planets.shift();
     console.log(planets);
 
 
@@ -46,8 +46,10 @@
     console.log('Index of Earth: ' , indexOfEarth);
 
     console.log("Reversing the order of the planets array.");
+    planets.reverse();
     console.log(planets);
 
     console.log("Sorting the planets array.");
+    planets.sort();
     console.log(planets);
 })();
