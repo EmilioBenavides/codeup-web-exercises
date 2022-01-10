@@ -13,6 +13,7 @@
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
+
             let area;
             if (doRounding === true) {
                 area = Math.round(this.getArea());
