@@ -13,14 +13,19 @@
          *  > console.log(person.lastName) // "Sanchez"
          */
 
+        // How to declare an object example//
         var person =
-            {firstName: "Emilio",
+            {firstName: "Emilio", //firstName = property "Emilio = value of property//
             lastName: "Benavides",
+             sayHello: function () {
+                return `Hello from ${this.firstName} ${this.lastName}` // You can use this.firstName because your in the object
+                                                                        // and this. knows that your referring to the Variable
+             }
             }
 
         console.log(person.firstName);
         console.log(person.lastName);
-
+        console.log(person.sayHello());
         /**
          * TODO:
          * Add a sayHello method to the person object that returns a greeting using
@@ -31,10 +36,11 @@
          * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
          */
 
-        person.sayHello = function () {
-            console.log(this.firstName)
+        person.sayHello = function () {  //this method is shoving the greeting into the object while being outside the object//
+            console.log(`Hello from ${this.firstName} ${this.lastName}`)
         }
             person.sayHello()
+
 
 
         /** TODO:
@@ -58,8 +64,17 @@
         ];
 
         shoppers.forEach(function(shopper) {
-            console.log()
+         if (shopper.amount > 200) {
+             console.log(shopper.name + " You earned a discount of 12%");
+             console.log(`Your amount to pay before discount ${shopper.amount}`)
+             console.log("This is your new total " + (shopper.amount - (shopper.amount * .12)));
+         } else {
+             console.log(`Sorry, ${shopper.name} you did not earn a discount`);
+             console.log(`Your amount to pay is ${shopper.amount}`);
+
+         }
         })
+
 
 
 
@@ -77,6 +92,46 @@
          * > console.log(books[0].author.firstName) // "Douglas"
          * > console.log(books[0].author.lastName) // "Adams"
          */
+
+        let books = []
+        books[0] = {
+            title: "Where the red fern grows",
+            author: {
+                firstName: "Wilson",
+                lastName: "Rawls"
+            }
+
+        }
+        books[1] = {
+            title: "It",
+            author: {
+                firstName: "Stephen",
+                lastName: "King"
+            }
+        }
+        books[2] = {
+            title: "The Art of War",
+            author: {
+                firstName: "Sun",
+                lastName: "Tzu"
+            }
+        }
+        books[3] = {
+            title: "Coding for Dummies",
+            author: {
+                firstName: "Casey",
+                lastName: "Edwards"
+            }
+        }
+        books[4] = {
+            title: "How to smoke a wood pipe right",
+            author: {
+                firstName: "Mark",
+                lastName: "Robinson"
+            }
+        }
+        console.log(books);
+
 
         /**
          * TODO:
@@ -102,6 +157,15 @@
          *      ---
          *      ...
          */
+
+        books.forEach(function (book,index) {  // The forEach method can accept index as a parameter and reference it in the loop
+            console.log("Book # " + (index + 1));
+            console.log("Title " + book.title);
+            console.log("Author " + book.author.firstName + ' ' + book.author.lastName);
+
+        })
+
+
 
         /**
          * Bonus:
