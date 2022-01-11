@@ -1,4 +1,44 @@
+body { background-color: #18868a;
+    background-image: url(https://m.media-amazon.com/images/I/81z8pY+Mb-L._AC_SL1500_.jpg);
+    background-repeat: no-repeat;
+    background-size: 1000px 1300px;
+    font-family: "Hiragino Kaku Gothic Pro", serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,h2 {
+    color: cyan;
+    text-decoration: underline;
+}
+ul {
+    list-style: square;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
+}
+
 .fancy-header {
     color: #ff003b;
     text-decoration: underline;
 }
+
