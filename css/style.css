@@ -10,7 +10,7 @@ h1 {
 }
 
 h1,h2 {
-    color: cyan;
+    color: #7b0ebb;
     text-decoration: underline;
 }
 ul {
@@ -19,6 +19,9 @@ ul {
 
 table, th, td {
     border: 2px solid black;
+}
+table, tr {
+    padding: 10px;
 }
 
 a:link {
