@@ -87,11 +87,11 @@
 
 //for (let i = 0; i < favoriteArtists.length; i++) {
     // console.log(favoriteArtists[i])
-}
+// }
 // Refactored version of original// 
 //for (let i = favoriteArtists.length - 1; i >= 0; i--) {
     // console.log(favoriteArtists[i])
-}
+// }
 
 //favoriteArtists.forEach(function (favoriteArtist) {
 //    console.log(favoriteArtist)
@@ -99,11 +99,11 @@
 
 
 function arrayToString(myArray) {
-    let canCatString;
+    let canCatString = "";
     for (let i = 0; i < myArray.length; i++) {
         canCatString += myArray[i];
     }
-    return conCatString;
+    return canCatString;
 }
 console.log(arrayToString(["Me", "I", "You", "They"]));
 
