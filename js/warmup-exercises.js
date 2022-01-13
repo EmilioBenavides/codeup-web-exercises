@@ -77,7 +77,7 @@
 
 // Array exercise
 
-var favoriteArtists = ['King George Strait', 'Cody Johnson', 'Tupac', 'Notorius BIG', 'Weird Al Yankovic'];
+//var favoriteArtists = ['King George Strait', 'Cody Johnson', 'Tupac', 'Notorius BIG', 'Weird Al Yankovic'];
 // console.log(favoriteArtists[0]);
 // console.log(favoriteArtists[2]);
 // console.log(favoriteArtists[4]);
@@ -85,18 +85,27 @@ var favoriteArtists = ['King George Strait', 'Cody Johnson', 'Tupac', 'Notorius 
 
 // Iterating Arrays//
 
-for (let i = 0; i < favoriteArtists.length; i++) {
+//for (let i = 0; i < favoriteArtists.length; i++) {
     // console.log(favoriteArtists[i])
 }
 // Refactored version of original// 
-for (let i = favoriteArtists.length - 1; i >= 0; i--) {
+//for (let i = favoriteArtists.length - 1; i >= 0; i--) {
     // console.log(favoriteArtists[i])
 }
 
-favoriteArtists.forEach(function (favoriteArtist) {
-    console.log(favoriteArtist)
-})
+//favoriteArtists.forEach(function (favoriteArtist) {
+//    console.log(favoriteArtist)
+//})
 
+
+function arrayToString(myArray) {
+    let canCatString;
+    for (let i = 0; i < myArray.length; i++) {
+        canCatString += myArray[i];
+    }
+    return conCatString;
+}
+console.log(arrayToString(["Me", "I", "You", "They"]));
 
 
 
