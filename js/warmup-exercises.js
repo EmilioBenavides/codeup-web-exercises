@@ -98,18 +98,33 @@
 //})
 
 
-function arrayToString(myArray) {
-    let canCatString = "";
-    for (let i = 0; i < myArray.length; i++) {
-        canCatString += myArray[i];
+// function arrayToString(myArray) {
+//     let canCatString = "";
+//     for (let i = 0; i < myArray.length; i++) {
+//         canCatString += myArray[i];
+//     }
+//     return canCatString;
+// }
+// console.log(arrayToString(["Me", "I", "You", "They"]));
+
+
+
+// Define a function named removeAll(array, value) that takes in two arguments. The first argument should be an array and the second argument should be a value you wish to remove
+// Given the following array as an argument (do not define this array inside your function - pass it in as an argument)
+ var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+// removeAll(bugs, "ant") should return ["mosquito", "scorpion", "mosquito", "typo", "reference error", "type error"]
+// removeAll(bugs, "mosquito") should return ["ant", "scorpion", "ant", "ant", "typo", "reference error", "type error"]
+// removeAll(bugs, "roach") should return the original array b/c “roach” has no occurrances.
+
+    var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+    function removedAll(array, value) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== value(i)) {
+            return removedAll()
+        }
     }
-    return canCatString;
-}
-console.log(arrayToString(["Me", "I", "You", "They"]));
-
-
-
-
+    console.log(removedAll())
+    }
 
 
 
