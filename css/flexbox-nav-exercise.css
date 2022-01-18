@@ -6,6 +6,7 @@ body {
 }
 nav {
     background: #ccc7c7;
+    display: flex;
 }
 ul {
     list-style: none;
@@ -14,24 +15,39 @@ ul {
     display: flex;
     justify-content: left;
     align-items: center;
+    flex-grow: 1;
 }
 nav a {
     text-decoration: none;
     color: black;
-    font-family: Verdana;
+    font-family: sans-serif;
     display: inline-block;
     padding: 1em;
 }
 nav a:hover {
     background: blue;
+    color: white;
 }
 nav ul li:nth-child(5) {
     /*
         this allows the last flex item to be right justified
         by filling remaining space to the left of the flex item with margin
     */
-    margin: auto;
+    margin: 0 auto;
     font-size:3em;
-    padding-top: .2em;
-    padding-bottom: .2em;
+    /*padding-top: .2em;*/
+    /*padding-bottom: .2em;*/
+    /*padding: .2em 0;*/
+}
+img {
+    height: 20px;
+    width: 20px;
+    margin: 0 .5em;
+}
+.image-container {
+    display: flex;
+    align-items: center;
+}
+nav ul li:nth-child(6) {
+    margin-right: 1em;
 }
