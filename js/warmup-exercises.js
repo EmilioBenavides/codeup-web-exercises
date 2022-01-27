@@ -163,18 +163,21 @@
 //     Example input: [95, 74, 86, 100]
 // Example output: 88.75
 
+// function findAverage(grades) {
+//
+//     let sum = 0;
+//
+//     grades.forEach(function (grade) {
+//         sum = sum + grade;
+//     });
+//
+//     return sum / grades.length
+//
+// }
+// console.log(findAverage([95, 74, 94, 88]))
 
-
-
-function findAverage(grades) {
-
-    let sum = 0;
-
-    grades.forEach(function (grade) {
-        sum = sum + grade;
-    });
-
-    return sum / grades.length
-
+function sumOfSquares(a, b) {
+    return (a * a) + (b * b);
 }
-console.log(findAverage([95, 74, 94, 88]))
+console.log(sumOfSquares(2, 3));
+
