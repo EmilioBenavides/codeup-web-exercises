@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+    <style>
+        .button {
+            height: 30px;
+            background-color: #c28135;
+            border: none;
+            margin: .7em 0;
+            border-radius: 10px;
+            box-shadow: 0 7px #050505;
+            width: 100%;
+            color: #181717;
+            font-weight: bolder;
+            font-family: 'Kings', cursive;
+            font-size: large;
+
+        }
+
+        .button:active {
+            background-color: #2d5d9a;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
 </head>
 
 <body>
-    <button id="btn1">Change the main header!</button>
-    <button id="btn2">Change sub header color!</button>
-    <button id="btn3">Change text color on list!</button>
-    <button id="btn4">Change first list color to blue!</button>
+    <button class="button" id="btn1">Change the main header!</button>
+    <button class="button" id="btn2">Change sub header color!</button>
+    <button class="button" id="btn3">Change text color on list!</button>
+    <button class="button" id="btn4">Change first list color to blue!</button>
     <h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
