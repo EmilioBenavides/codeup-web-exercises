@@ -176,8 +176,258 @@
 // }
 // console.log(findAverage([95, 74, 94, 88]))
 
-function sumOfSquares(a, b) {
-    return (a * a) + (b * b);
-}
-console.log(sumOfSquares(2, 3));
+// function sumOfSquares(a, b) {
+//     return (a * a) + (b * b);
+// }
+// console.log(sumOfSquares(2, 3));
+//
+// var firstStg = "";
+// var secondStg = "";
+//
+// function whichStringIsLonger(firstStg, secondStg) {
+//
+//     if (typeof firstStg !== "string" || typeof secondStg !== "string") {
+//         return false;
+//     }
+//     if (firstStg.length > secondStg.length) {
+//         return "first";
+//     }
+//     if (secondStg.length > firstStg.length) {
+//         return "second";
+//     }
+//             return "neither"
+//         }
+//
+// console.log(whichStringIsLonger("hello", "hello there"));
+// console.log(whichStringIsLonger(123, "lol"));
 
+//Create a function that returns the remainder of two numbers
+//
+// function total(a,b) {
+//     return a - b;
+// }
+// console.log(total(8,5));
+
+// The name of the function will never go into the body of the function
+// Everything in between the curly braces is the body of the  function
+// The function name will alaways be outside the body of the function
+
+//Create a function that returns the type of the argument or 'blank' if the argument is empty
+// typeReturn('Hello') //string
+// typeReturn(3)//number
+// typeReturn(" ") //blank
+
+// function verify (str) {   //The str is the variable for the function
+//     if (str === " ") {
+//         return "blank";
+//     } else {
+//        return typeof str;
+//     }
+// }
+// console.log(verify('Hello')); //string // The hello is the argument and becomes the variable
+// console.log(verify(3));//number
+// console.log(verify(" ")); //blank
+
+// How to find the length of a string
+
+// function myString (stri) {
+//     return stri.length
+// }
+// console.log(myString("hello"));
+
+//create a function that will take a float and return (IN STRING FORMAT) the amount formatting in dollars and cents.
+// 3 needs to become $3.00
+// 3.1 needs to become $3.10
+
+// function dollarString (x) {
+//     return "$" + x.toFixed(2); // The to.Fixed() method will go to the specified decimal number ex (2)
+// }
+// console.log(dollarString(3));
+// console.log(dollarString(3.1));
+
+// Create a function named capitalize and returns the string with the first letter capitalized
+// capitalize('hello')// Output: Hello
+
+// function capitalize (veritas) {
+//     return veritas.charAt(0).toUpperCase() + veritas.slice(1);
+// }
+// console.log(capitalize("hello"));
+
+// function isBoolean (ray) {
+//     if (typeof ray === 'boolean') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(isBoolean(0));
+// console.log(isBoolean(false));
+// console.log(typeof true);
+
+// function isString (wes) {
+//     if (typeof wes === 'string') {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(isString("mary"));
+// console.log(isString(99));
+
+function sumOfThreeNum (x,y,z) {
+    if(typeof  x !== "number"){
+        return false;
+    }
+    if(typeof y !== "number") {
+        return false;
+    }
+    if (typeof z !== "number") {
+        return false;
+    }
+    return x + y + z;
+}
+console.log(sumOfThreeNum(1,2,3));
+console.log(sumOfThreeNum(-10, 3, "sou"));
+//
+// function convertInchesToCentimeters(p) {
+//     if (typeof p !== "number") {
+//         return false;
+//     } else{
+//         return p * 2.54;
+//     }
+// }
+// console.log(convertInchesToCentimeters(5));
+// console.log(convertInchesToCentimeters("run"));
+// console.log(convertInchesToCentimeters(20));
+//
+function upperCase(eString) {
+    if (typeof eString !== "string") {
+        return false;
+    }
+    return eString.toUpperCase();
+
+    var parsedVal = parseInt(eString);
+
+    if (typeof parsedVal === "number") {
+        return eString;
+    }
+
+}
+console.log(upperCase("hello"));
+console.log(upperCase("you"));
+console.log(upperCase(123));
+console.log(upperCase("123"));
+
+//
+// Question 1:
+// function lowerCase(aString) {
+//     if (typeof aString !== "string") {
+//         return false;
+//     }
+//     return aString.toLowerCase();
+// }
+//
+// console.log(lowerCase("hello From Codeup"));
+// console.log(lowerCase(123));
+// console.log(lowerCase(-10));
+//
+// Question 2:
+//
+// function subtract(a, b) {
+//     if (typeof a !== "number") {
+//         return false;
+//     }
+//     if (typeof b !== "number") {
+//         return false;
+//     }
+//     return a - b;
+// }
+// console.log(subtract(3,1));
+// console.log(subtract("10",2));
+// console.log(subtract(-4,1));
+//
+// function multiplyBy2(x) {
+//     if (typeof x !== "number") {
+//         return false;
+//     }
+//     return x * 2;
+//     var parsedVal = parseInt(x);
+//
+//     if (typeof parsedVal === "123") {
+//         return x;
+//     }
+//
+// }
+//
+//
+// console.log(multiplyBy2(2));
+// console.log(multiplyBy2("4"));
+// console.log(multiplyBy2(null));
+//
+//
+// function getLowestNumber(a,b,c) {
+//     if (typeof a !== "number") {
+//         return false;
+//     }
+//     if (typeof b !== "number") {
+//         return false;
+//     }
+//     if (typeof c !== "number") {
+//         return false;
+//     }
+//     if (a > highest) {
+//         return a
+//     }
+//
+// }
+// console.log(getLowestNumber("1",3,2));
+
+function isEvenlyDivisable(t, y) {
+    if (y || t % 2 === 1) {
+        return true;
+    }
+}
+
+console.log(isEvenlyDivisable(100, 2));
+
+function inBetween(w, i, l) {
+    return ((w - i) * (w - l) <= 0);
+}
+
+console.log(inBetween(10, 0, 12));
+
+
+function replace(b, n, m) {
+    if (typeof b !== "string") {
+        return false;
+    }
+    return b + n;
+}
+
+console.log(replace("codedown", "down", "up"));
+
+
+function addStringLengths(o, p) {
+    if (typeof o !== "string")
+        return false;
+}
+    if (typeof p !== "string") {
+    return false;
+}
+console.log(addStringLengths(1,2));
+
+
+function convertHourToSec(hours) {
+
+}
+
+function calculateChange(totalPaid, totalCost) {
+    if (typeof totalPaid !== "number") {
+        return false;
+    }
+    if (typeof totalCost !== "number"){
+        return false
+    }
+    return "$" + (totalCost.toFixed(2) - totalPaid.toFixed(2));
+}
+console.log(calculateChange(7.50,1.50));
