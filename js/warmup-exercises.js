@@ -274,20 +274,20 @@
 // console.log(isString("mary"));
 // console.log(isString(99));
 
-function sumOfThreeNum (x,y,z) {
-    if(typeof  x !== "number"){
-        return false;
-    }
-    if(typeof y !== "number") {
-        return false;
-    }
-    if (typeof z !== "number") {
-        return false;
-    }
-    return x + y + z;
-}
-console.log(sumOfThreeNum(1,2,3));
-console.log(sumOfThreeNum(-10, 3, "sou"));
+// function sumOfThreeNum (x,y,z) {
+//     if(typeof  x !== "number"){
+//         return false;
+//     }
+//     if(typeof y !== "number") {
+//         return false;
+//     }
+//     if (typeof z !== "number") {
+//         return false;
+//     }
+//     return x + y + z;
+// }
+// console.log(sumOfThreeNum(1,2,3));
+// console.log(sumOfThreeNum(-10, 3, "sou"));
 //
 // function convertInchesToCentimeters(p) {
 //     if (typeof p !== "number") {
@@ -300,23 +300,23 @@ console.log(sumOfThreeNum(-10, 3, "sou"));
 // console.log(convertInchesToCentimeters("run"));
 // console.log(convertInchesToCentimeters(20));
 //
-function upperCase(eString) {
-    if (typeof eString !== "string") {
-        return false;
-    }
-    return eString.toUpperCase();
-
-    var parsedVal = parseInt(eString);
-
-    if (typeof parsedVal === "number") {
-        return eString;
-    }
-
-}
-console.log(upperCase("hello"));
-console.log(upperCase("you"));
-console.log(upperCase(123));
-console.log(upperCase("123"));
+// function upperCase(eString) {
+//     if (typeof eString !== "string") {
+//         return false;
+//     }
+//     return eString.toUpperCase();
+//
+//     var parsedVal = parseInt(eString);
+//
+//     if (typeof parsedVal === "number") {
+//         return eString;
+//     }
+//
+// }
+// console.log(upperCase("hello"));
+// console.log(upperCase("you"));
+// console.log(upperCase(123));
+// console.log(upperCase("123"));
 
 //
 // Question 1:
@@ -381,53 +381,78 @@ console.log(upperCase("123"));
 //
 // }
 // console.log(getLowestNumber("1",3,2));
+//
+// function isEvenlyDivisable(t, y) {
+//     if (y || t % 2 === 1) {
+//         return true;
+//     }
+// }
+//
+// console.log(isEvenlyDivisable(100, 2));
+//
+// function inBetween(w, i, l) {
+//     return ((w - i) * (w - l) <= 0);
+// }
+//
+// console.log(inBetween(10, 0, 12));
+//
+//
+// function replace(b, n, m) {
+//     if (typeof b !== "string") {
+//         return false;
+//     }
+//     return b + n;
+// }
+//
+// console.log(replace("codedown", "down", "up"));
+//
+//
+// function addStringLengths(o, dString) {
+//     if (typeof o !== "string")
+//         return false;
+// }
+//     if (typeof dString !== "string") {
+//     return false;
+// }
+// console.log(addStringLengths(1,2));
+//
+//
+// function convertHourToSec(hours) {
+//
+// }
+//
+// function calculateChange(totalPaid, totalCost) {
+//     if (typeof totalPaid !== "number") {
+//         return false;
+//     }
+//     if (typeof totalCost !== "number"){
+//         return false
+//     }
+//     return "$" + (totalCost.toFixed(2) - totalPaid.toFixed(2));
+// }
+// console.log(calculateChange(7.50,1.50));
 
-function isEvenlyDivisable(t, y) {
-    if (y || t % 2 === 1) {
-        return true;
+// Write a function called convertLowHighToObject that takes in a string  that represents the low and high temperature in this format '35, 42'
+// (assuming low will always be the left value and high the right) and returns an object with the properties 'low' and 'high' with the values of
+// those respective properties set to the corresponding values in the input string.
+//     NOTE: the values in the object should be of the number type
+// Example input: '35, 42'
+// Example return: {low: 35, high: 42}
+
+
+
+function convertLowHighToObject(tempString) {
+    let tempArr = tempString.split(', ');
+    return {
+        low: parseInt(tempArr[0]),
+        high: parseInt(tempArr[1]),
     }
 }
 
-console.log(isEvenlyDivisable(100, 2));
-
-function inBetween(w, i, l) {
-    return ((w - i) * (w - l) <= 0);
-}
-
-console.log(inBetween(10, 0, 12));
+console.log(convertLowHighToObject('35, 42'));
 
 
-function replace(b, n, m) {
-    if (typeof b !== "string") {
-        return false;
-    }
-    return b + n;
-}
-
-console.log(replace("codedown", "down", "up"));
 
 
-function addStringLengths(o, p) {
-    if (typeof o !== "string")
-        return false;
-}
-    if (typeof p !== "string") {
-    return false;
-}
-console.log(addStringLengths(1,2));
 
 
-function convertHourToSec(hours) {
-
-}
-
-function calculateChange(totalPaid, totalCost) {
-    if (typeof totalPaid !== "number") {
-        return false;
-    }
-    if (typeof totalCost !== "number"){
-        return false
-    }
-    return "$" + (totalCost.toFixed(2) - totalPaid.toFixed(2));
-}
-console.log(calculateChange(7.50,1.50));

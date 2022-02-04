@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>JQUERY EXAMPLE</title>
+    <title>JQUERY Exercises</title>
 </head>
 <body>
-<script src="/js/jquery-2.2.4.js"></script>
 
-<script src="/jquery-example.js"></script>
+<!-- INSERT HTML CODE SAMPLE HERE -->
 
-<!--console.log($.fn.jquery);-->
+<div id="div1" class="myDivs">
+    <h1> hello world</h1>
+</div>
+
+<div id="div2" class="myDivs">
+    <p>someboring code</p>
+</div>
+
+<script type="text/javascript" src="/js/jquery-2.2.4.js"></script>
+<script>
+    var myDiv = document.querySelector("#div1");
+    console.log(myDiv.innerHTML);
+    myDiv.innerHTML = "<h4>hello world</h4>";
+    // returns a jquery version of the element
+    var myDiv2 = $("#div1");
+    console.log("jquery html contents of div1: " + myDiv2.html());
+    myDiv2.html("<p>hello world again</p>");
+
+    //first save a reference to all of myDivs
+    var allMyDivs = $(".myDivs");
+    allMyDivs.html("<p>some boring text</p>");
+
+    //this does the same thing above except it uses method chaining
+    // Another name for method chaining is : fluent interface
+    $(".myDivs")
+        .html("<p>some boring text</p>")
+        .css('background-color', 'green');
+
+    //does not work!!! jquery is superior!
+    // document.querySelectorAll(".myDivs").innerHTML("more stuff goes here");
+    // $(".myDivs").css("background-color", "green");
+    $("p").css("font-weight", "bolder");
+
+
+</script>
+<!--<script>$(document).ready(function() {-->
+<!--   alert("The DOM is finished loading!")-->
+<!--});</script>-->
+
 </body>
 </html>
