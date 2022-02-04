@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>JQUERY Exercises</title>
 </head>
@@ -12,10 +12,10 @@
 <p id="my-p1" class="codeup"> YOLO YOLO YOLO</p>
 
 <ul id="my-ul" class="my-ul">
-    <li id="my-li1" class="codeup">Item1 </li>
-    <li id="my-li2" class="my-li2">Item2 </li>
-    <li id="my-li3">Item3 </li>
-    <li id="my-li4">Item4 </li>
+    <li id="my-li1" class="codeup">Item1</li>
+    <li id="my-li2" class="my-li2">Item2</li>
+    <li id="my-li3">Item3</li>
+    <li id="my-li4">Item4</li>
 </ul>
 
 <div>
@@ -23,12 +23,17 @@
 </div>
 
 
-<script src="js/jquery-2.2.4.js"> </script>
+<script src="js/jquery-2.2.4.js"></script>
 <script>
 
-   $('p').dblclick(function (){
-       $(this).css('font-size', '18px');
-   })
+    $('li').hover(
+        function () {
+            $(this).css('color', 'red');
+        },
+        function () {
+            $(this).css('color', 'black');
+        }
+    );
 
 </script>
 <!--<script>$(document).ready(function() {-->
