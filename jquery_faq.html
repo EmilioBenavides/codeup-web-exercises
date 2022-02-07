@@ -102,6 +102,11 @@
             $(this).parent().children().last().css('background-color', 'yellow')
             })
         });
+        $(document).ready(function() {
+            $('h3').click(function(event) {
+                $(this).next().children().css('font-weight', 'bold')
+            })
+        });
     });
 
 
