@@ -58,7 +58,7 @@
         <dt>What is the National Park Service budget?</dt>
         <dd class="invisible">Fiscal Year (FY) FY 2017 Enacted: $2.932 billion</dd>
 
-        <h3> Park Name</h3><
+        <h3> Park Name</h3>
 
             <ul>
                 <li>asdvadfg</li>
@@ -67,7 +67,7 @@
                 <li>sdfhsdfghs</li>
             </ul>
 
-        <h3> Park Name</h3><
+        <h3> Park Name</h3>
 
             <ul>
                 <li>sdfhsdfgh</li>
@@ -76,7 +76,7 @@
                 <li>sdfhsdghsd</li>
             </ul>
 
-        <h3> Park Name</h3><
+        <h3> Park Name</h3>
 
             <ul>
                 <li>sdfhsdh</li>
@@ -98,11 +98,12 @@
 
     $(document).ready(function() {
         $('#highlight-important').click(function(event) {
-            $('dd').toggleClass('invisible');
+            $('li').each(function () {
+            $(this).parent().children().last().css('background-color', 'yellow')
+            })
         });
     });
 
-    $('li').last().css('background-color', 'yellow');
 
 </script>
 </body>
