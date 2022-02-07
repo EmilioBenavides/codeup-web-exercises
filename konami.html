@@ -1,50 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JQUERY Exercises</title>
+    <title>Konami Code</title>
 </head>
 <body>
 
-<!-- INSERT HTML CODE SAMPLE HERE -->
 
-<div id="div1" class="myDivs">
-    <h1> hello world</h1>
-</div>
 
-<div id="div2" class="myDivs">
-    <p>someboring code</p>
-</div>
-
-<script type="text/javascript" src="/js/jquery-2.2.4.js"></script>
+<script src="/js/jquery-2.2.4.js"></script>
 <script>
-    var myDiv = document.querySelector("#div1");
-    console.log(myDiv.innerHTML);
-    myDiv.innerHTML = "<h4>hello world</h4>";
-    // returns a jquery version of the element
-    var myDiv2 = $("#div1");
-    console.log("jquery html contents of div1: " + myDiv2.html());
-    myDiv2.html("<p>hello world again</p>");
-
-    //first save a reference to all of myDivs
-    var allMyDivs = $(".myDivs");
-    allMyDivs.html("<p>some boring text</p>");
-
-    //this does the same thing above except it uses method chaining
-    // Another name for method chaining is : fluent interface
-    $(".myDivs")
-        .html("<p>some boring text</p>")
-        .css('background-color', 'green');
-
-    //does not work!!! jquery is superior!
-    // document.querySelectorAll(".myDivs").innerHTML("more stuff goes here");
-    // $(".myDivs").css("background-color", "green");
-    $("p").css("font-weight", "bolder");
+    "use strict";
 
 
+    $(document).ready(function() {
+        console.log('Konami Code!!!');
+        let konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+        let konamiPosition = 0;
+
+        $(document).keyup(function(e) {
+                let expectedKey = konamiCode[konamiPosition];
+                let keyPressed = e.keyCode;
+                if (expectedKey === keyPressed) {
+                    konamiPosition++;
+                    if (konamiPosition === konamiCode.length) {
+                        $('body').css('background-color', 'red');
+                        alert('YOU  ARE IMMORTAL!!!')
+                        konamiPosition = 0;
+                    }
+                } else {
+                    konamiPosition = 0;
+                }
+        })
+    })
+        $()
 </script>
-<!--<script>$(document).ready(function() {-->
-<!--   alert("The DOM is finished loading!")-->
-<!--});</script>-->
+
 
 </body>
 </html>
