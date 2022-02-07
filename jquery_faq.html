@@ -97,15 +97,16 @@
     "use strict";
 
     $(document).ready(function() {
-        $('#highlight-important').click(function(event) {
+        $('#highlight-important').click(function (event) {
             $('li').each(function () {
-            $(this).parent().children().last().css('background-color', 'yellow')
+                $(this).parent().children().last().css('background-color', 'yellow')
             })
         });
-        $(document).ready(function() {
-            $('h3').click(function(event) {
-                $(this).next().children().css('font-weight', 'bold')
-            })
+        $('h3').click(function (event) {
+            $(this).next().children().css('font-weight', 'bold')
+        })
+        $('li').click(function (event) {
+            $(this).parent().children().first().css('color', 'blue')
         });
     });
 
