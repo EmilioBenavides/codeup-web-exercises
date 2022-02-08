@@ -1,0 +1,20 @@
+[
+  {
+    "title": "hippo",
+    "quantity": 25,
+    "catagories": [
+      "countries"
+    ],
+    "price": 10000
+
+  },
+  {
+    "title": "rhino",
+    "quantity": 55,
+    "catagories": [
+      "cities"
+    ],
+    "price": 20000
+
+  }
+]

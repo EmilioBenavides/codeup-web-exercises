@@ -31,10 +31,10 @@
         ],
         "price": 10
     }, {
-        "title": "Pancakes",
-        "Quantity": 500,
+        "title": "sockets",
+        "quantity": 500,
         "categories": [
-            "food"
+            "tool"
         ],
         "price": 1000
 }
