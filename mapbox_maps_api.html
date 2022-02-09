@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>My favorite restaurant!</h1>
+<h1>My favorite restaurants in San Antonio, Texas!</h1>
 <div id='map' style='width: 400px; height: 300px;'></div>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
@@ -17,19 +17,75 @@
 
 
     <script>
+
+        let restaurants = [
+            {
+                Name: "El Bucanero",
+                Address: "8300 Marbach RD, San Antonio, TX 78227",
+                Food: "I love the fish tacos and Dosaritas"
+            },
+
+            {
+                Name: "Chama Gaucha",
+                Address: "18318 Sonterra Pl, San Antonio, TX 78258",
+                Food: "The variety of steak is amazing"
+            },
+
+            {
+                Name: "Pappadeaux Seafood Kitchen",
+                Address: "15715 I-10 West, San Antonio, TX 78257",
+                Food: "The seafood is amazing!"
+            }
+        ];
+
+
         mapboxgl.accessToken = EMILIO_MAP_ID;
-        var map = new mapboxgl.Map({
+        let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 20,
+        zoom: 5,
         center: [-98.4916, 29.4252]
     });
 
-        geocode("8300 Marbach Road, San Antonio, TX 78227", EMILIO_MAP_ID).then(function(result) {
-            console.log(result);
-            map.setCenter(result);
-            map.setZoom(20);
-        });
+        function sendIt (result, food) {
+            let marker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+            let popup = new mapboxgl.Popup()
+                .setHTML(food)
+                marker.setPopup(popup)
+        }
+        //
+        // function geocode(search, token) {
+        //     var baseUrl = 'https://api.mapbox.com';
+        //     var endPoint = '/geocoding/v5/mapbox.places/';
+        //     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+        //         .then(function(res) {
+        //             return res.json();
+        //             // to get all the data from the request, comment out the following three lines...
+        //         }).then(function(data) {
+        //             return data.features[0].center;
+        //         });
+        // }
+
+
+
+        restaurants.forEach(function (restaurant) {
+            geocode(restaurant.Address, EMILIO_MAP_ID).then(function(result) {
+                sendIt(result, restaurant.Food)
+            })
+        })
+
+
+
+
+
+
+        // geocode("8300 Marbach Road, San Antonio, TX 78227", EMILIO_MAP_ID).then(function(result) {
+        //     console.log(result);
+        //     map.setCenter(result);
+        //     map.setZoom(20);
+        // });
 </script>
 
 
