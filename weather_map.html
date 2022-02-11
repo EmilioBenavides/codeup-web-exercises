@@ -23,81 +23,16 @@
 </head>
 <body>
 
-
-<h1>Current weather in Uvalde, Texas!</h1>
-<div id="weather-card" class="container"></div>
+<h1>Current weather Texas!</h1>
+<div id="weather-card" class="row d-flex justify-content-center" ></div>
 <div id='map' class="container"></div>
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
 <script src="js/jquery-2.2.4.js"></script>
 <script src="js/keys.js"></script>
-<script>
 
-    mapboxgl.accessToken = EMILIO_MAP_ID;
-    let map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-99.786171, 29.20984]
-    });
-
-    // restaurants.forEach(function (restaurant) {
-    //     geocode(restaurant.Address, EMILIO_MAP_ID).then(function(result) {
-    //         sendIt(result, restaurant.Name)
-    //     })
-
-    // })
-    function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-            .then(function(res) {
-                return res.json();
-                // to get all the data from the request, comment out the following three lines...
-            }).then(function(data) {
-                return data.features[0].center;
-            });
-    }
-
-    function currentWeather (result, data) {
-        let marker = new mapboxgl.Marker()
-            .setLngLat(result)
-            .addTo(map);
-        let popup = new mapboxgl.Popup()
-            .setHTML(name)
-        marker.setPopup(popup)
-    }
-
-    $.get("data").done(dailyForcast)
-    function dailyForcast (weatherCard) {
-        data.daily.forEach(function (current) {
-            $("#weather-card").append(`<div class="card" style="width: 18rem;">
-      <div class="card-body">${current.temp}</div>
-        <h5 class="card-title">${current.daily}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">${current.clouds}</h6>
-        <p class="card-text">${weather.date}</p>
-      </div>
-    </div>`);
-        })
-    }
-    $.get("data").weather-card(weatherCard)
-
-
-
-    $.get("http://api.openweathermap.org/data/2.5/onecall", {
-        APPID: EMILIO_WEATHER_APPID,
-        lat:    29.20984,
-        lon:   -99.786171,
-        units: "imperial"
-    }).done(function(data) {
-        console.log('Diving in - here is current information: ', data.current.temp);
-        console.log(data);
-    });
-
-
-
-
-</script>
+<script src="js/weatherMap/map-box.js"></script>
+<script src="js/weatherMap/weather-map.js"></script>
 
 </body>
 </html>
