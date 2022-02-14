@@ -8,12 +8,12 @@ $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&excl
             console.log(unixTimeStamp)
             console.log(date)
             let html = "";
-            html += `<div class="card" style="width: 18rem;">
+            html += `<div class="card mx-5 text-center mb-4" style="width: 18rem">
   <div class="card-header">
    ${date}
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">${data.daily[i].temp.min}°F / ${data.daily[i].temp.max}°F <img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png"</li>
+    <li class="list-group-item" >${data.daily[i].temp.min}°F / ${data.daily[i].temp.max}°F <img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png"</li>
     
     <li class="list-group-item">Description: ${data.daily[i].weather[0].description} Humidity: ${data.daily[i].humidity}</li>
     <li class="list-group-item">${data.daily[i].wind_speed}</li>
