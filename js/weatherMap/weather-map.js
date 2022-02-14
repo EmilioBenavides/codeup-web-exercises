@@ -1,11 +1,16 @@
 "use strict";
 $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly&appid=${EMILIO_WEATHER_APPID}&units=imperial`)
     .done(function (data) {
+        console.log(data);
         for (let i = 0; i < 5; i++) {
+            let unixTimeStamp = data.daily[i].dt
+            var date = new Date(unixTimeStamp * 1000).toLocaleDateString();
+            console.log(unixTimeStamp)
+            console.log(date)
             let html = "";
             html += `<div class="card" style="width: 18rem;">
   <div class="card-header">
-    Featured
+   ${date}
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${data.daily[i].temp.min}°F / ${data.daily[i].temp.max}°F <img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png"</li>

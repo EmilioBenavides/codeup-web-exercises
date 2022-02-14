@@ -1,10 +1,19 @@
 "use strict";
 mapboxgl.accessToken = EMILIO_MAP_ID;
 let map = initMap()   //Put map into a variable so you can use it throughout JS file
+console.log(map);
 let marker;
 map.on("click", (event) => {setMarker(event)})
 
 // This sec is for the functionality for accessing or updating map data
+
+const geocoder = new MapboxGeocoder({
+    // Initialize the geocoder
+    accessToken: EMILIO_MAP_ID, // Set the access token
+    mapboxgl: mapboxgl, // Set the mapbox-gl instance
+    marker: true, // Do not use the default marker style
+    }).addTo(map)
+
 
 function getMarker(location) {
     return new mapboxgl.Marker()
@@ -37,4 +46,6 @@ function initMap() {
     });
     return map;
 }
+
+
 
