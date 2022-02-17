@@ -15,6 +15,18 @@
             text-align: center;
             font-weight: bolder;
         }
+        body {
+            background-image: url("https://64.media.tumblr.com/654f1ca43f8002b327f174aa06acb76b/tumblr_p6bafoxhn31u5t1zyo1_400.gifv");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /*position: fixed;*/
+            top: 0;
+            background-color: #7ebe88;
+        }
+
+        h1 {
+            color: #443d3d;
+        }
 
     </style>
 </head>
@@ -56,10 +68,21 @@
         mapboxgl.accessToken = EMILIO_MAP_ID;
         let map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 5,
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 10,
         center: [-98.4916, 29.4252]
     });
+        function geocode(search, token) {
+            var baseUrl = 'https://api.mapbox.com';
+            var endPoint = '/geocoding/v5/mapbox.places/';
+            return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+                .then(function(res) {
+                    return res.json();
+                    // to get all the data from the request, comment out the following three lines...
+                }).then(function(data) {
+                    return data.features[0].center;
+                });
+        }
 
         function sendIt (result, name) {
             let marker = new mapboxgl.Marker()
@@ -81,8 +104,6 @@
             .done(function (data) {
             console.log('Diving in - here is current information: ', data.current);
             });
-
-        function currentWeather ()
 
 </script>
 
