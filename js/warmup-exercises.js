@@ -451,8 +451,53 @@
 //
 // console.log(convertLowHighToObject('35, 42'));
 
+//ENTRY LEVEL INTERVIEW QUESTIONS
+// function countDuplicates(String) {
+//         //initialize object
+//     let letterCounterObject = {};
+//     //initialize starting count
+//     let count = 1;
+//     //traverse
+//     for (let i =0; i < String.length; i++) {
+//         if (!(String[i] in letterCounterObject)) {
+//             letterCounterObject[String[i]] = count;
+//         } else {
+//             letterCounterObject[String[i]] = letterCounterObject[String[i]] + 1;
+//         }
+//     }
+//     return letterCounterObject;
+// }
+//
+// console.log(countDuplicates("adfgadfgadfgadfg"));
 
+//
+// Write a function called makePerson. It takes 2 arguments: personName and age.
+//     personName must be at least 1 character long. age must be between 1 and 150.
+// If either of the parameters is invalid, output an appropriate message to the console and return FALSE.
+//     If both parameters are valid, return an object containing personName and age.
+//     E.g.,
+//     console.log(makePerson("Bob", 30)); // outputs {personName:"Bob", age:30}
+// console.log(makePerson("", 30));
+// outputs:
+// Person name cannot be blank
+// false
 
+function makePerson(personName, personAge) {
+    if (personName.length === 0) {
+        console.log("Person name cannot be blank!");
+        return false;
+    }
+    if (personAge <1 || personAge > 150) {
+        console.log("age must be between 1 and 150!");
+        return false;
+    }
+    return {
+        personName,
+        personAge
+    };
+}
+
+console.log(makePerson("bob", 30))
 
 
 
