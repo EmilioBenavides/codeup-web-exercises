@@ -14,7 +14,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    // console.log(names.length);
+     //console.log(names.length);
 
 
     /**
@@ -75,11 +75,6 @@
         console.log(friends[friends.length - 1])
     }
     lastIndex(names)
-
-
-
-
-
 
 })();
 
