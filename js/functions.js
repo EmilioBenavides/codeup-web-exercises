@@ -121,6 +121,7 @@
  const age = 23;
  const drink = age >= 18 ? 'wine' : 'water';
  console.log(drink);
+
  let drink2;
  if (age >= 18) {
      drink2 = 'wine';
@@ -128,5 +129,23 @@
      drink2 = 'water';
  }
 console.log(drink2)
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+
+
+ const tip = 40;
+ const totalBill = tip / .2;
+ const bill = 275;
+
+
+
+
+
+
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total bill was ${totalBill}. `)
+
+
 
 
