@@ -29,7 +29,7 @@ favMovie[0] = {
     myRating: 10,
     rate : function(rating){
         this.myRating = rating;
-    }
+    },
     academyawardwining: false
 };
 

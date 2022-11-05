@@ -5,7 +5,7 @@
 //         console.log(`${i}: ** Pats that a good boi!**`);
 //     }
 // }
-// }
+
 
 //Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)//
 
@@ -52,13 +52,13 @@
 
 //Create a for loop that uses console.log to create the output shown below//
 
-function reverseLoop() {
-    for (let i = 100; i >= 5; i -= 5) {
-        console.log(i);
-    }
-}
-
-reverseLoop()
+// function reverseLoop() {
+//     for (let i = 100; i >= 5; i -= 5) {
+//         console.log(i);
+//     }
+// }
+//
+// reverseLoop()
 
 
 
